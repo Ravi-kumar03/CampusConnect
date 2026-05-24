@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/* ─── DARK THEME (default) ─────────────────────────────── */
+body,
+body[data-theme="dark"] {
+  --bg-app:               linear-gradient(135deg, #0a1628 0%, #0d2a4a 50%, #0a1f3d 100%);
+  --bg-sidebar:           linear-gradient(180deg, #0d1f3c 0%, #0a1628 100%);
+  --bg-sidebar-footer:    rgba(8, 18, 34, 0.88);
+  --bg-sidebar-footer-hover: rgba(13, 31, 60, 0.95);
+  --bg-search-wrapper:    rgba(10, 22, 40, 0.2);
+  --bg-search-input:      rgba(10, 22, 40, 0.5);
+  --bg-search-input-focus: rgba(10, 22, 40, 0.78);
+  --bg-contact:           rgba(255, 255, 255, 0.03);
+  --bg-contact-hover:     rgba(37, 99, 235, 0.1);
+  --bg-contact-selected:  linear-gradient(135deg, rgba(30,64,175,0.3), rgba(14,116,144,0.2));
+  --bg-chat:              linear-gradient(180deg, #0a1628 0%, #091525 100%);
+  --bg-chat-header:       rgba(13, 31, 60, 0.82);
+  --bg-chat-input-area:   rgba(10, 22, 40, 0.92);
+  --bg-input-container:   rgba(255, 255, 255, 0.05);
+  --bg-msg-sent:          linear-gradient(135deg, #1e40af, #0e7490);
+  --bg-msg-received:      rgba(255, 255, 255, 0.06);
+  --bg-card:              rgba(13, 31, 60, 0.72);
+  --bg-form-input:        rgba(10, 22, 40, 0.62);
+  --bg-form-input-focus:  rgba(10, 22, 40, 0.82);
+  --bg-toggle:            rgba(255, 255, 255, 0.06);
+  --bg-toggle-hover:      rgba(37, 99, 235, 0.15);
+
+  --text-primary:         #f0f6ff;
+  --text-secondary:       #94a3b8;
+  --text-muted:           #64748b;
+  --text-contact:         #e2e8f0;
+  --text-contact-sub:     #475569;
+  --text-user-name:       #cbd5e1;
+  --text-user-status:     #475569;
+  --text-placeholder:     #475569;
+  --text-msg-sent:        #e2e8f0;
+  --text-msg-received:    #cbd5e1;
+  --text-section:         #475569;
+  --text-empty:           #475569;
+  --text-chat-name:       #e2e8f0;
+  --text-label:           #94a3b8;
+  --text-tagline:         #94a3b8;
+  --text-footer-span:     #64748b;
+  --text-link:            #22d3ee;
+  --text-selected-contact: #60a5fa;
+  --text-brand:           linear-gradient(135deg, #60a5fa, #22d3ee);
+
+  --border-sidebar:       rgba(37, 99, 235, 0.15);
+  --border-brand:         rgba(37, 99, 235, 0.1);
+  --border-search:        rgba(37, 99, 235, 0.08);
+  --border-input:         rgba(37, 99, 235, 0.22);
+  --border-input-focus:   rgba(6, 182, 212, 0.48);
+  --border-card:          rgba(37, 99, 235, 0.2);
+  --border-contact-hover: rgba(37, 99, 235, 0.2);
+  --border-contact-sel:   rgba(6, 182, 212, 0.3);
+  --border-empty:         rgba(37, 99, 235, 0.12);
+  --border-footer:        rgba(37, 99, 235, 0.12);
+  --border-chat-header:   rgba(37, 99, 235, 0.15);
+  --border-chat-input:    rgba(37, 99, 235, 0.15);
+  --border-input-cont:    rgba(37, 99, 235, 0.2);
+  --border-input-cont-focus: rgba(6, 182, 212, 0.4);
+  --border-avatar:        rgba(37, 99, 235, 0.2);
+  --border-avatar-hero:   rgba(6, 182, 212, 0.32);
+  --border-logout:        rgba(239, 68, 68, 0.2);
+  --border-logout-hover:  rgba(239, 68, 68, 0.4);
+
+  --shadow-card:   0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(6,182,212,0.08);
+  --shadow-app:    0 25px 60px rgba(0,0,0,0.5), 0 0 40px rgba(6,182,212,0.05);
+  --shadow-ring:   0 0 0 3px rgba(6, 182, 212, 0.09);
+
+  --orb1-color: rgba(37, 99, 235, 0.12);
+  --orb2-color: rgba(6, 182, 212, 0.1);
+
+  --scrollbar-thumb: rgba(37, 99, 235, 0.3);
+
+  --logout-icon:   #f87171;
+  --logout-bg:     rgba(239, 68, 68, 0.1);
+  --logout-bg-hover: rgba(239, 68, 68, 0.2);
+  --logout-icon-hover: #fca5a5;
+}
+
+/* ─── LIGHT THEME ───────────────────────────────────────── */
+body[data-theme="light"] {
+  --bg-app:               linear-gradient(135deg, #eef4ff 0%, #e8f0fe 50%, #f0f6ff 100%);
+  --bg-sidebar:           linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%);
+  --bg-sidebar-footer:    rgba(248, 251, 255, 0.97);
+  --bg-sidebar-footer-hover: rgba(240, 246, 255, 0.99);
+  --bg-search-wrapper:    rgba(240, 246, 255, 0.6);
+  --bg-search-input:      rgba(255, 255, 255, 0.92);
+  --bg-search-input-focus: #ffffff;
+  --bg-contact:           rgba(37, 99, 235, 0.025);
+  --bg-contact-hover:     rgba(37, 99, 235, 0.07);
+  --bg-contact-selected:  linear-gradient(135deg, rgba(37,99,235,0.13), rgba(6,182,212,0.08));
+  --bg-chat:              linear-gradient(180deg, #f8faff 0%, #f0f6ff 100%);
+  --bg-chat-header:       rgba(255, 255, 255, 0.96);
+  --bg-chat-input-area:   rgba(248, 250, 255, 0.99);
+  --bg-input-container:   rgba(255, 255, 255, 0.95);
+  --bg-msg-sent:          linear-gradient(135deg, #2563eb, #0891b2);
+  --bg-msg-received:      rgba(37, 99, 235, 0.07);
+  --bg-card:              rgba(255, 255, 255, 0.93);
+  --bg-form-input:        rgba(255, 255, 255, 0.9);
+  --bg-form-input-focus:  #ffffff;
+  --bg-toggle:            rgba(37, 99, 235, 0.06);
+  --bg-toggle-hover:      rgba(37, 99, 235, 0.12);
+
+  --text-primary:         #0f172a;
+  --text-secondary:       #334155;
+  --text-muted:           #64748b;
+  --text-contact:         #1e293b;
+  --text-contact-sub:     #64748b;
+  --text-user-name:       #0f172a;
+  --text-user-status:     #64748b;
+  --text-placeholder:     #94a3b8;
+  --text-msg-sent:        #ffffff;
+  --text-msg-received:    #1e293b;
+  --text-section:         #64748b;
+  --text-empty:           #94a3b8;
+  --text-chat-name:       #0f172a;
+  --text-label:           #64748b;
+  --text-tagline:         #64748b;
+  --text-footer-span:     #64748b;
+  --text-link:            #2563eb;
+  --text-selected-contact: #1d4ed8;
+  --text-brand:           linear-gradient(135deg, #1d4ed8, #0891b2);
+
+  --border-sidebar:       rgba(37, 99, 235, 0.12);
+  --border-brand:         rgba(37, 99, 235, 0.1);
+  --border-search:        rgba(37, 99, 235, 0.1);
+  --border-input:         rgba(37, 99, 235, 0.28);
+  --border-input-focus:   rgba(6, 182, 212, 0.52);
+  --border-card:          rgba(37, 99, 235, 0.15);
+  --border-contact-hover: rgba(37, 99, 235, 0.18);
+  --border-contact-sel:   rgba(6, 182, 212, 0.4);
+  --border-empty:         rgba(37, 99, 235, 0.18);
+  --border-footer:        rgba(37, 99, 235, 0.1);
+  --border-chat-header:   rgba(37, 99, 235, 0.1);
+  --border-chat-input:    rgba(37, 99, 235, 0.1);
+  --border-input-cont:    rgba(37, 99, 235, 0.22);
+  --border-input-cont-focus: rgba(6, 182, 212, 0.48);
+  --border-avatar:        rgba(37, 99, 235, 0.18);
+  --border-avatar-hero:   rgba(6, 182, 212, 0.3);
+  --border-logout:        rgba(239, 68, 68, 0.18);
+  --border-logout-hover:  rgba(239, 68, 68, 0.35);
+
+  --shadow-card:   0 20px 60px rgba(37,99,235,0.1), 0 4px 20px rgba(37,99,235,0.07);
+  --shadow-app:    0 25px 60px rgba(37,99,235,0.1), 0 0 40px rgba(6,182,212,0.04);
+  --shadow-ring:   0 0 0 3px rgba(6, 182, 212, 0.12);
+
+  --orb1-color: rgba(37, 99, 235, 0.08);
+  --orb2-color: rgba(6, 182, 212, 0.07);
+
+  --scrollbar-thumb: rgba(37, 99, 235, 0.22);
+
+  --logout-icon:   #ef4444;
+  --logout-bg:     rgba(239, 68, 68, 0.07);
+  --logout-bg-hover: rgba(239, 68, 68, 0.15);
+  --logout-icon-hover: #dc2626;
+}
+
+/* ─── BASE RESET ────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+body,
+button,
+input {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+/* Toast override */
+.Toastify__toast-theme--dark {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-card) !important;
+  backdrop-filter: blur(12px) !important;
+  font-family: "Inter", sans-serif !important;
+  color: var(--text-primary) !important;
+}

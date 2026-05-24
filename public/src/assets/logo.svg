@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="30" y1="30" x2="170" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="60" y1="100" x2="140" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" opacity="0.15"/>
+  <circle cx="100" cy="100" r="96" stroke="url(#iconGrad)" stroke-width="2" fill="none" opacity="0.4"/>
+
+  <!-- Graduation cap (flat cap top) -->
+  <polygon points="100,42 158,68 100,94 42,68" fill="url(#iconGrad)" filter="url(#glow)" opacity="0.95"/>
+
+  <!-- Cap brim highlight -->
+  <polygon points="100,42 158,68 100,94 42,68" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Cap stem / tassel drop -->
+  <rect x="97.5" y="68" width="5" height="30" rx="2.5" fill="url(#iconGrad)" opacity="0.9"/>
+  <circle cx="100" cy="102" r="5" fill="url(#accentGrad)" filter="url(#glow)"/>
+
+  <!-- Left side of mortarboard (body below cap) -->
+  <path d="M58 75 L58 108 C58 118 75 126 100 126 C125 126 142 118 142 108 L142 75"
+        stroke="url(#iconGrad)" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.85"/>
+
+  <!-- Chat bubble — collaboration symbol, bottom right -->
+  <rect x="98" y="128" width="54" height="36" rx="10" fill="url(#bgGrad)" opacity="0.9"/>
+  <rect x="98" y="128" width="54" height="36" rx="10" stroke="url(#iconGrad)" stroke-width="2" fill="none"/>
+  <!-- bubble tail -->
+  <path d="M108 164 L102 174 L116 164 Z" fill="url(#iconGrad)" opacity="0.85"/>
+  <!-- dots inside bubble -->
+  <circle cx="113" cy="146" r="3.5" fill="url(#accentGrad)"/>
+  <circle cx="125" cy="146" r="3.5" fill="url(#accentGrad)"/>
+  <circle cx="137" cy="146" r="3.5" fill="url(#accentGrad)"/>
+
+  <!-- Second smaller bubble — top left, overlapping -->
+  <rect x="48" y="118" width="44" height="30" rx="8" fill="url(#bgGrad)" opacity="0.9"/>
+  <rect x="48" y="118" width="44" height="30" rx="8" stroke="url(#iconGrad)" stroke-width="1.8" fill="none" opacity="0.7"/>
+  <!-- tail right side -->
+  <path d="M82 148 L90 156 L80 148 Z" fill="url(#iconGrad)" opacity="0.7"/>
+  <!-- dots inside small bubble -->
+  <circle cx="62" cy="133" r="3" fill="url(#accentGrad)" opacity="0.8"/>
+  <circle cx="70" cy="133" r="3" fill="url(#accentGrad)" opacity="0.8"/>
+  <circle cx="78" cy="133" r="3" fill="url(#accentGrad)" opacity="0.8"/>
+</svg>
