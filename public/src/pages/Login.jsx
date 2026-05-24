@@ -11,6 +11,7 @@ export default function Login() {
   const [values, setValues] = useState({ username: "", password: "" });
   const toastOptions = { position: "bottom-right", autoClose: 8000, pauseOnHover: true, draggable: true, theme: "dark" };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) navigate("/");
   }, []);

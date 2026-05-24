@@ -16,6 +16,7 @@ export default function Register() {
     ? values.email.split("@")[1].toLowerCase().trim()
     : "";
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) navigate("/");
   }, []);
