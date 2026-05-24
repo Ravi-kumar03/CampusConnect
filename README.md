@@ -192,4 +192,10 @@ This project is built for academic demonstration purposes.
 
 ---
 
+## 🙏 Acknowledgements
+
+CampusConnect was inspired by real-time chat application tutorials and open-source learning resources created by [Koolkishan](https://github.com/koolkishan) and the broader developer community. The foundational MERN stack architecture and Socket.io integration patterns were informed by community-driven examples, which were subsequently extended and transformed into this institution-scoped collaboration platform.
+
+---
+
 *Built with ❤️ using the MERN stack.*
