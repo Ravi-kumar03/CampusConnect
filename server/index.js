@@ -7,7 +7,17 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
-app.use(cors());
+// Allow requests from the deployed frontend or localhost in dev
+const allowedOrigins = process.env.CLIENT_URL
+  ? [process.env.CLIENT_URL, "http://localhost:3000"]
+  : ["http://localhost:3000"];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 mongoose
@@ -16,7 +26,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("DB Connetion Successfull");
+    console.log("DB Connection Successful");
   })
   .catch((err) => {
     console.log(err.message);
@@ -29,12 +39,14 @@ app.get("/ping", (_req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-const server = app.listen(process.env.PORT, () =>
-  console.log(`Server started on ${process.env.PORT}`)
+const server = app.listen(process.env.PORT || 5000, () =>
+  console.log(`Server started on port ${process.env.PORT || 5000}`)
 );
+
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
     credentials: true,
   },
 });
@@ -42,6 +54,7 @@ const io = socket(server, {
 global.onlineUsers = new Map();
 io.on("connection", (socket) => {
   global.chatSocket = socket;
+
   socket.on("add-user", (userId) => {
     onlineUsers.set(userId, socket.id);
   });
@@ -50,6 +63,16 @@ io.on("connection", (socket) => {
     const sendUserSocket = onlineUsers.get(data.to);
     if (sendUserSocket) {
       socket.to(sendUserSocket).emit("msg-recieve", data.msg);
+    }
+  });
+
+  socket.on("disconnect", () => {
+    // Clean up on disconnect to prevent stale entries
+    for (const [userId, socketId] of onlineUsers.entries()) {
+      if (socketId === socket.id) {
+        onlineUsers.delete(userId);
+        break;
+      }
     }
   });
 });
