@@ -88,14 +88,6 @@ Navigate to **http://localhost:3000** in your browser.
 
 ---
 
-## 🖼 Screenshots
-
-| Login | Chat |
-|---|---|
-| ![Login](./images/campusconnect-login.png) | ![Chat](./images/campusconnect-preview.png) |
-
----
-
 ## 🐳 Docker (Optional)
 
 ```bash
